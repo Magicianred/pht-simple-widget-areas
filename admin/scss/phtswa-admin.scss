@@ -1,0 +1,39 @@
+ƒ.js {.phtswa-container {
+	margin-top:12px;
+	padding:12px;
+	background:#303030;
+	max-width:920px - 24px;
+	& > h3, & { color:#fff; }
+	h3 {margin-top:0}
+	label {display:block; font-style: italic; font-size:11px;}
+	input {border:none; box-shadow:none}
+	
+}
+div#widgets-right .phtswa-title h3 {
+	padding-left:48px;
+}
+.phtswa-table {display:none}
+.phtswa-remove-button .dashicons {
+	position:absolute;
+	text-decoration: none;
+	height:48px;
+	width:48px;
+	line-height:48px !important;
+	background:#303030;
+	color:#fff;
+	left:-8px;
+	top:0;
+	transition:.5s;
+	&:hover {
+		background:#A45A52;
+	}
+}
+
+div#widgets-right .phtswa-title + .sidebar-description {
+	margin-top:10px;
+	p {padding-bottom:10px}
+}
+
+.phtswa-small {font-size:10px;}
+.phtswa-id {position:absolute; left:48px; bottom:0}
+}

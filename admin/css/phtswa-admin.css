@@ -1,0 +1,60 @@
+/*! pht-simple-widget-areas 1.0.0 filename.css 2015-05-14 4:32:32 PM */
+
+.js .phtswa-container {
+  margin-top: 12px;
+  padding: 12px;
+  background: #303030;
+  max-width: 896px;
+}
+.js .phtswa-container > h3, .js .phtswa-container {
+  color: #fff;
+}
+.js .phtswa-container h3 {
+  margin-top: 0;
+}
+.js .phtswa-container label {
+  display: block;
+  font-style: italic;
+  font-size: 11px;
+}
+.js .phtswa-container input {
+  border: none;
+  box-shadow: none;
+}
+.js div#widgets-right .phtswa-title h3 {
+  padding-left: 48px;
+}
+.js .phtswa-table {
+  display: none;
+}
+.js .phtswa-remove-button .dashicons {
+  position: absolute;
+  text-decoration: none;
+  height: 48px;
+  width: 48px;
+  line-height: 48px !important;
+  background: #303030;
+  color: #fff;
+  left: -8px;
+  top: 0;
+  transition: .5s;
+}
+.js .phtswa-remove-button .dashicons:hover {
+  background: #A45A52;
+}
+.js div#widgets-right .phtswa-title + .sidebar-description {
+  margin-top: 10px;
+}
+.js div#widgets-right .phtswa-title + .sidebar-description p {
+  padding-bottom: 10px;
+}
+.js .phtswa-small {
+  font-size: 10px;
+}
+.js .phtswa-id {
+  position: absolute;
+  left: 48px;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=phtswa-admin.css.map */
