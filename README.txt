@@ -22,7 +22,7 @@ The default output tag is 'li' with classes 'widget phtswa-widget'. The tag and 
 Use PHT_Simple_Widget_Areas::$pht_simple_widget_areas or get_option( 'pht_simple_widget_areas' ) for an array of all generated areas.
 
 == Installation ==
-Upload `pht-simple-widget-areas` to the `/wp-content/plugins/` directory
+Upload the `pht-simple-widget-areas` folder to the `/wp-content/plugins/` directory
 
 == Changelog ==
 = 1.0.0 =

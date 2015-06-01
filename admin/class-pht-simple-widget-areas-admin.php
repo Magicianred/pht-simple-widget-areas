@@ -125,6 +125,7 @@ class PHT_Simple_Widget_Areas_Admin {
 	}
 
 	public function display_admin_page() {
+		
 		if ( ! current_user_can( $this->capabilities ) ) {
 			return;
 		}
