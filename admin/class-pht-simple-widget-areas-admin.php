@@ -101,6 +101,8 @@ class PHT_Simple_Widget_Areas_Admin {
 
 		if ( $this->viewing_this_plugin() ) {
 			wp_enqueue_script( $this->name, plugin_dir_url( __FILE__ ) . 'js/pht-simple-widget-areas-admin.min.js', array( 'jquery' ), $this->version, false );
+
+			$notifications = $this->notifications();
 			
 			wp_localize_script( 
 				'jquery', 
@@ -110,7 +112,7 @@ class PHT_Simple_Widget_Areas_Admin {
 				 	'regex_pattern' => substr( $this->regex_pattern, 1, -1 ),
 				 	'simple_widget_areas' => self::$pht_simple_widget_areas,
 					'reserved_terms' => $this->registered_sidebars,
-					'error_messages' => $this->notifications()['error'],
+					'error_messages' => $notifications['error'],
 					'confirmation'=> apply_filters( $this->name . '_confirmation_question' , __( 'Are you sure you want to delete this widget area?', $this->name ) ),
 					'prefix' => $this->id_prefix, 
 				)					
@@ -454,13 +456,15 @@ class PHT_Simple_Widget_Areas_Admin {
 	 */
 	public function get_notification() {
 		
-		if ( isset( $_GET['phtswamsg'] ) ) : 
+		if ( isset( $_GET['phtswamsg'] ) ) :
+
+			$notifications = $this->notifications();
 			
 			preg_match( '/\A(updated|error)-(\d+)\z/',  $_GET['phtswamsg'], $matches );
 			
-			if ( $matches && isset( $this->notifications()[$matches[1]][$matches[2]] ) ) { ?>
+			if ( $matches && isset( $notifications[$matches[1]][$matches[2]] ) ) { ?>
 				<div id="message" class="<?php echo $matches[1]; ?>">
-					<?php echo $this->notifications()[$matches[1]][$matches[2]]; ?>
+					<?php echo $notifications[$matches[1]][$matches[2]]; ?>
 				</div>
 			<?php }
 		
